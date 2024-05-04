@@ -1,5 +1,6 @@
 "use client";
 
+import { LeagueForm } from "../../../../components/LeagueForm";
 import useLeagueQuery from "../../../../hooks/use-league";
 
 export default function LeaguePage({ params }: { params: { id: number } }) {
@@ -16,6 +17,7 @@ export default function LeaguePage({ params }: { params: { id: number } }) {
   return (
     <div>
       <h1>{league.name}</h1>
+      <LeagueForm leagueId={params.id} leagueName={league.name} />
     </div>
   );
 }
